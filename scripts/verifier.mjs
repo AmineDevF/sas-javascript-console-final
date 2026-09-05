@@ -54,14 +54,21 @@ let syntaxErrors = 0;
 let missing = 0;
 
 for (const day of dayFolders) {
+  const guideDirectory = path.join(root, day, 'guides');
   const exerciseDirectory = path.join(root, day, 'exercices');
   const challengeFile = path.join(root, day, 'challenge', 'challenge.js');
-  const expectedFiles = Array.from({ length: 20 }, (_, index) =>
+  const expectedFiles = Array.from({ length: 3 }, (_, index) =>
+    path.join(
+      guideDirectory,
+      'guide-' + String(index + 1).padStart(2, '0') + '.js',
+    ),
+  );
+  expectedFiles.push(...Array.from({ length: 20 }, (_, index) =>
     path.join(
       exerciseDirectory,
       'exercice-' + String(index + 1).padStart(2, '0') + '.js',
     ),
-  );
+  ));
   expectedFiles.push(challengeFile);
 
   let dayComplete = 0;

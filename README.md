@@ -1,16 +1,31 @@
-# SAS JavaScript Console — Dépôt candidat
+# 🚀 SAS JavaScript Console
 
-Ce dépôt accompagnera toute ta progression pendant les sept journées du SAS. Les exercices seront ajoutés progressivement : tu ne recevras que la journée en cours.
+> [!IMPORTANT]
+> Voici ton espace personnel de travail pour les sept jours du SAS. Une nouvelle journée sera ajoutée chaque matin.
 
-## Mon identité
+## 👤 Mon identité
 
-- Nom et prénom :
-- Classe :
-- Nom d'utilisateur GitHub :
+| Information | À compléter |
+|---|---|
+| Nom et prénom | ... |
+| Classe | ... |
+| Nom d'utilisateur GitHub | ... |
 
-## Première installation
+## 🧭 Comment travailler
 
-Après avoir créé ton dépôt avec **Use this template** :
+```text
+1. LIRE → 2. CODER → 3. EXÉCUTER → 4. VÉRIFIER → 5. COMMIT → 6. PUSH
+```
+
+| Besoin | Où aller ? |
+|---|---|
+| Suivre les journées terminées | [📊 Ma progression](./PROGRESSION.md) |
+| Retrouver les commandes Git | [🌿 Aide Git](./docs/commandes-git.md) |
+| Voir le résultat des contrôles | Onglet **Actions** du dépôt |
+
+## 1️⃣ Première installation
+
+Après avoir cliqué sur **Use this template**, puis créé ton dépôt personnel :
 
 ```bash
 git clone URL_DE_TON_DEPOT
@@ -18,12 +33,15 @@ cd NOM_DE_TON_DEPOT
 git status
 ```
 
-## Ajouter le paquet du jour
+> [!TIP]
+> Remplace `URL_DE_TON_DEPOT` et `NOM_DE_TON_DEPOT` par les informations affichées sur ton dépôt GitHub.
+
+## 2️⃣ Ajouter la journée reçue
 
 1. Télécharge le ZIP publié dans Google Classroom.
 2. Extrais le dossier `dayXX` à la racine de ce dépôt.
 3. Vérifie les nouveaux fichiers avec `git status`.
-4. Crée un commit avant de commencer les solutions.
+4. Crée un premier commit avant de coder.
 
 ```bash
 git add dayXX
@@ -31,16 +49,27 @@ git commit -m "jour XX : ajouter les fichiers de départ"
 git push
 ```
 
-## Routine quotidienne
+## 3️⃣ Routine quotidienne
 
-```text
-Lire → Coder → Exécuter → Vérifier → git add → git commit → git push
+Pour exécuter un exercice :
+
+```bash
+node dayXX/exercices/exercice-01.js
 ```
 
-Commandes détaillées : [docs/commandes-git.md](./docs/commandes-git.md)
+Pour contrôler tous les fichiers déjà reçus :
 
-Progression : [PROGRESSION.md](./PROGRESSION.md)
+```bash
+npm test
+```
 
-## Vérification automatique
+## ✅ Comprendre le résultat
 
-`npm test` vérifie que les fichiers déjà publiés ne sont plus vides et qu'ils ne contiennent pas d'erreur de syntaxe. Cette vérification ne remplace pas l'explication orale ni l'évaluation du formateur.
+| Symbole | Signification |
+|:---:|---|
+| ✓ | Le fichier contient du code et sa syntaxe est valide. |
+| ○ | L'exercice contient encore `TODO` ou aucune solution. |
+| ✗ | Un fichier manque ou contient une erreur de syntaxe. |
+
+> [!NOTE]
+> Le contrôle automatique vérifie la présence du travail et la syntaxe. Le formateur évalue aussi la logique, l'autonomie et ton explication orale.
